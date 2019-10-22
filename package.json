@@ -1,6 +1,6 @@
 {
   "name": "@getgreenline/react-native-socket-mobile",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React Native Socket Mobile for https://www.socketmobile.com/developers",
   "author": "Sam Hoult <sam@getgreenline.co>",
   "main": "index.js",
