@@ -68,7 +68,11 @@ RCT_EXPORT_METHOD(stop: (RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseReje
 
 -(void)didReceiveDecodedData:(SKTCaptureDecodedData*) decodedData fromDevice:(SKTCaptureHelperDevice*) device withResult:(SKTResult) result{
     if (SKTSUCCESS(result) && hasListeners) {
-        [self sendEventWithName:DecodedData body:@{@"data": [NSString stringWithUTF8String:(const char *)[decodedData.DecodedData bytes]]}];
+        NSString* dataString = [NSString stringWithUTF8String:(const char *)[decodedData.DecodedData bytes]];
+        if (dataString == nil) {
+            dataString = @"";
+        }
+        [self sendEventWithName:DecodedData body:@{@"data": dataString}];
     }
 }
 
