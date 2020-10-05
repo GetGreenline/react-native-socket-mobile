@@ -2,7 +2,7 @@
 
 import { NativeEventEmitter, NativeModules } from 'react-native';
 
-const { ReactNativeSocketMobile } = NativeModules;
+const { ReactNativeSocketMobile, BoilerPlate } = NativeModules;
 // Exported only for test purposes
 export const emitter = new NativeEventEmitter(ReactNativeSocketMobile);
 
@@ -39,6 +39,10 @@ const setDeviceStatusListener = (callback: (status: StatusType) => void) => {
   });
 };
 
+const test = () => {
+  return BoilerPlate.getName()
+}
+
 const clearAllListeners = () => {
   emitter.removeAllListeners(DECODED_DATA_LISTENER);
   emitter.removeAllListeners(STATUS_DEVICE_LISTENER);
@@ -51,4 +55,5 @@ export default {
   setDataListener,
   setDeviceStatusListener,
   updateStatusFromDevices,
+  test
 };

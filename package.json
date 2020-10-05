@@ -7,6 +7,7 @@
   "homepage": "https://github.com/getgreenline/react-native-socket-mobile",
   "license": "MIT",
   "files": [
+    "android/",
     "ios/",
     "index.js"
   ],
