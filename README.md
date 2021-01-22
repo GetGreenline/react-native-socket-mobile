@@ -6,10 +6,32 @@
 This native module is a wrapper over the [Socket Mobile SDK](https://www.socketmobile.com/developer/portal/welcome). If you have a developer account and valid credentials, you will be able to use your scanner within your React Native application.
 
 ## Table of contents
-- [Installation](#installation)
+- [Installation > RN v0.6x](#installation-react-native-06x)
+- [Installation < RN v0.5x](#installation-react-native-05x)
 - [API Reference](#api-reference)
 
-## Installation
+***
+
+## Installation (React Native 0.6x)
+
+```bash
+yarn add react-native-socket-mobile
+```
+
+### iOS
+
+React native enables auto-linking by default.
+
+1. Go to `/ios` folder in your project
+2. Run `Pod install`
+
+> If you have 
+`pod 'ReactNativeSocketMobile', path: path: "#{node_modules_path}/react-native-socket-mobile/ios"` 
+> in your `Podfile`, please remove it
+
+***
+
+## Installation (React Native 0.5x)
 
 Add the library using `yarn` or `npm`:
 
